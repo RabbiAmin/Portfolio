@@ -1,74 +1,30 @@
 import streamlit as st
+from PIL import Image
+from io import BytesIO
 import requests
-from streamlit_lottie import st_lottie
 from streamlit_timeline import timeline
 import streamlit.components.v1 as components
-from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader, LLMPredictor, ServiceContext
 from constant import *
-from PIL import Image
-import openai
-from langchain.chat_models import ChatOpenAI
 from streamlit_lottie import st_lottie
-import time
-import threading
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Amin Webpage", page_icon=":tada:", layout="wide")
 
-#st.set_page_config(page_title='Template' ,layout="wide")
+# Add your portfolio images URLs
 
-# -----------------  chatbot  ----------------- #
-#Set up the OpenAI key
-# openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter', type="password")
-# openai.api_key = (openai_api_key)
 
-# #load the file
-# documents = SimpleDirectoryReader(input_files=["bio.txt"]).load_data()
-
-# pronoun = info["Pronoun"]
-# name = info["Name"]
-# def ask_bot(input_text):
-#     # define LLM
-#     llm = ChatOpenAI(
-#         model_name="gpt-3.5-turbo",
-#         temperature=0,
-#         openai_api_key=openai.api_key,
-#         )
-#     llm_predictor = LLMPredictor(llm=llm)
-#     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-    
-#     # load index
-#     index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)    
-    
-#     # query LlamaIndex and GPT-3.5 for the AI's response
-#     PROMPT_QUESTION = f"""You are Buddy, an AI assistant dedicated to assisting {name} in her job search by providing recruiters with relevant and concise information. 
-#     If you do not know the answer, politely admit it and let recruiters know how to contact {name} to get more information directly from {pronoun}. 
-#     Don't put "Buddy" or a breakline in the front of your answer.
-#     Human: {input}
-#     """
-    
-#     output = index.as_query_engine().query(PROMPT_QUESTION.format(input=input_text))
-#     print(f"output: {output}")
-#     return output.response
-
-# # get the user's input by calling the get_text function
-# def get_text():
-#     input_text = st.text_input("After providing OpenAI API Key on the sidebar, you can send your questions and hit Enter to know more about me from my AI agent, Buddy!", key="input")
-#     return input_text
-
-# #st.markdown("Chat With Me Now")
-# user_input = get_text()
-
-# if user_input:
-#   #text = st.text_area('Enter your questions')
-#   if not openai_api_key.startswith('sk-'):
-#     st.warning('⚠️Please enter your OpenAI API key on the sidebar.', icon='⚠')
-#   if openai_api_key.startswith('sk-'):
-#     st.info(ask_bot(user_input))
 
 # -----------------  loading assets  ----------------- #
-st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
+#st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
+# Display the image in the sidebar
+
+
+
+
+
+
+
     
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -96,14 +52,45 @@ js_lottie = load_lottieurl("https://lottie.host/fc1ad1cd-012a-4da2-8a11-0f00da67
 
 
 # ----------------- info ----------------- #
+
+
+
 def gradient(color1, color2, color3, content1, content2):
-    st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});font-size:60px;border-radius:2%;">'
-                f'<span style="color:{color3};">{content1}</span><br>'
-                f'<span style="color:white;font-size:17px;">{content2}</span></h1>', 
-                unsafe_allow_html=True)
+    st.markdown(f'''
+    <style>
+        .gradient-header {{
+            text-align: center;
+            background-image: linear-gradient(to right, {color2}, {color1}); /* Deep blue to light pink gradient */
+            font-size: 60px;
+            border-radius: 2%;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adding text shadow for readability */
+            transition: all 0.3s ease-in-out;
+            color: {color3}; /* Light cyan text color for contrast */
+        }}
+        .gradient-header:hover {{
+            background-image: linear-gradient(to left, {color2}, {color1});
+        }}
+        @keyframes gradient-animation {{
+            0% {{ background-position: 0% 50%; }}
+            50% {{ background-position: 100% 50%; }}
+            100% {{ background-position: 0% 50%; }}
+        }}
+        .animated-gradient {{
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }}
+    </style>
+    <h1 class="gradient-header animated-gradient">
+        <span>{content1}</span><br>
+        <span style="font-size: 17px;">{content2}</span>
+    </h1>
+    ''', unsafe_allow_html=True)
+
+
+
 
 with st.container():
-    col1,col2 = st.columns([8,3])
+    col1, col2 = st.columns([8,3])
 
 full_name = info['Full_Name']
 with col1:

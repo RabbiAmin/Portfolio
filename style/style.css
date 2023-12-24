@@ -1,17 +1,17 @@
-/* Change the sidebar color*/
+/* Change the sidebar color */
 [data-testid=stSidebar] {
-  background-image: linear-gradient(#000395,#FFD4DD);
+  background-image: linear-gradient(#6699CC, #FFEBEE);
 }
 
-/* Style hyperlinks*/
-a{
-  display: block; 
-  color:#2e9aff !important;
+/* Style hyperlinks */
+a {
+  display: block;
+  color: #ADD8E6 !important;
   font-weight: bold;
 }
 
-p{
-  color: white
+p {
+  color: #333333;
 }
 
 .st-ck {
@@ -24,19 +24,20 @@ p{
 
 /* Style the contact form */
 input[type=message], input[type=email], input[type=text], textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
     margin-top: 6px;
-    margin-bottom: 16px; 
+    margin-bottom: 16px;
     resize: vertical
 }
 
+
 /* Style the submit button with a specific background color etc */
 button[type=submit] {
-  background-color: #04AA6D;
+  background-color: #90EE90;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -55,24 +56,29 @@ footer {visibility: hidden;}
 header {visibility: hidden;}
 
 
-/* Design Hyperlink */
-a:link , a:visited{
-color: blue;
-text-decoration: underline;
-}
-
-a:hover,  a:active {
-color: red;
-text-decoration: underline;
-}
 
 .footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: #001d6c;
-color: white;
-text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #B0E0E6;
+  color: black;
+  text-align: center;
+}
+
+/* Add this to your existing style.css file */
+#portfolio-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust as needed */
+    margin: 20px;
+}
+
+#portfolio-picture img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
 }
 

@@ -3,9 +3,9 @@ info = {
    "Name": "MR Amin",
    "Full_Name": "Md. Rabbi Amin",
    "Intro": "Data Analyst and Computer Science Engineer",
-   "About":"Hey there, I'm Amin! I'm passionate about sharing my technical and data knowledge. My expertise covers a wide range of topics, from AI and Data Science to Blockchain, Cloud, and more.",
-   "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
-   "Medium":"https://medium.com/@vicky-note/about",
+   "About":"Hey there, I'm Amin! I'm passionate about sharing my technical and data knowledge.",
+   "Tableau":"",
+   "Medium":"",
    "City":"Dhaka, Bangladesh",
    "Photo":"""<a href=\"https://bd.linkedin.com/in/md-rabbi-amin-a1807b118\"><img src=\"https://media.licdn.com/dms/image/C5103AQFXVP1x-LRUjA/profile-displayphoto-shrink_800_800/0/1561266339921?e=2147483647&v=beta&t=TWer23odbpZA83BK7RWGyH1J2IdMSzu7ChD7KkrbooU\" width=\"200\"   alt=\"Profile\" title=\"Profile\"></a>""",
    "Email": "rabbiamin98@gmail.com"
@@ -13,7 +13,7 @@ info = {
 
 embed_rss= {
     'rss':"""<div style="overflow-y: scroll; height:500px; background-color:white;"> <div id="retainable-rss-embed" 
-        data-rss="https://medium.com/feed/@vicky-note"
+        data-rss=""
         data-maxcols="3" 
         data-layout="grid"
         data-poststyle="inline" 
