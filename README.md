@@ -1,1 +1,1 @@
-bbb
+As I embark on building my portfolio from scratch using Streamlit, I'd like to express my gratitude towards Dive Deeper. Her insightful blog, "Build your portfolio with Streamlit," has been instrumental in shaping my approach to this project. Her guidance provided the foundational ideas necessary to kickstart my journey in creating a compelling and professional portfolio.
