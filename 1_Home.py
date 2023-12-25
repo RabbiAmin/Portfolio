@@ -1,6 +1,5 @@
 import streamlit as st
-from PIL import Image
-from io import BytesIO
+
 import requests
 from streamlit_timeline import timeline
 import streamlit.components.v1 as components
@@ -11,7 +10,6 @@ from streamlit_lottie import st_lottie
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Amin Webpage", page_icon=":tada:", layout="wide")
 
-# Add your portfolio images URLs
 
 
 
@@ -20,12 +18,6 @@ st.set_page_config(page_title="Amin Webpage", page_icon=":tada:", layout="wide")
 # Display the image in the sidebar
 
 
-
-
-
-
-
-    
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
@@ -41,13 +33,13 @@ local_css("style/style.css")
 # loading assets
 lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
 python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
-java_lottie = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
-my_sql_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
+r_lottie = load_lottieurl("https://lottie.host/f5417bd0-7cdb-46ee-816d-5cd18b76817a/sglAAWVwJV.json")
+robo_lottie = load_lottieurl("https://lottie.host/41a87b60-a1b8-4fbd-a28a-7a25e94ef80e/wSPoKxcM4E.json")
 git_lottie = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_03cuemhb.json")
 github_lottie = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
-docker_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
-figma_lottie = load_lottieurl("https://lottie.host/5b6292ef-a82f-4367-a66a-2f130beb5ee8/03Xm3bsVnM.json")
-js_lottie = load_lottieurl("https://lottie.host/fc1ad1cd-012a-4da2-8a11-0f00da670fb9/GqPujskDlr.json")
+mongodb_lottie = load_lottieurl("https://lottie.host/02eeadc0-1b96-4709-95f9-c28d6841608e/vzj1vCd69k.json")
+linux_lottie = load_lottieurl("https://lottie.host/359a71c2-d6b3-473d-a34f-fcef11de3cde/DOta7EGFyk.json")
+analysis_lottie = load_lottieurl("https://lottie.host/cb1c6c49-9df2-42d6-b1e8-835a667cda24/3TiAFbU32N.json")
 
 
 
@@ -60,12 +52,13 @@ def gradient(color1, color2, color3, content1, content2):
     <style>
         .gradient-header {{
             text-align: center;
-            background-image: linear-gradient(to right, {color2}, {color1}); /* Deep blue to light pink gradient */
-            font-size: 60px;
-            border-radius: 2%;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adding text shadow for readability */
+            background-image: linear-gradient(to right, {color2}, {color1});    
+            font-size: 40px;
+            border-radius: 50%;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
             transition: all 0.3s ease-in-out;
-            color: {color3}; /* Light cyan text color for contrast */
+            color: {color3}; 
+            padding: 20px; 
         }}
         .gradient-header:hover {{
             background-image: linear-gradient(to left, {color2}, {color1});
@@ -82,7 +75,7 @@ def gradient(color1, color2, color3, content1, content2):
     </style>
     <h1 class="gradient-header animated-gradient">
         <span>{content1}</span><br>
-        <span style="font-size: 17px;">{content2}</span>
+        <span style="font-size: 15px;">{content2}</span>
     </h1>
     ''', unsafe_allow_html=True)
 
@@ -94,14 +87,18 @@ with st.container():
 
 full_name = info['Full_Name']
 with col1:
-    gradient('#FFD4DD','#000395','e0fbfc',f"Hi, I'm {full_name}👋", info["Intro"])
+    gradient('#5A4692','#3097BF','#DADBDD',f"Hi, I'm {full_name}👋", info["Intro"])
     st.write("")
-    st.write(info['About'])
+    st.markdown(
+        f"<p style='font-size: 18px; color: #333; text-align: justify; line-height: 1.5em;'>{info['About']}</p>",
+        unsafe_allow_html=True
+    )
+
     
     
 with col2:
     st_lottie(lottie_gif, height=280, key="data")
-        
+
 
 # ----------------- skillset ----------------- #
 with st.container():
@@ -110,19 +107,19 @@ with st.container():
     with col1:
         st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
     with col2:
-        st_lottie(java_lottie, height=70,width=70, key="java", speed=4)
+        st_lottie(r_lottie, height=70,width=70, key="r", speed=4)
     with col3:
-        st_lottie(my_sql_lottie,height=70,width=70, key="mysql", speed=2.5)
+        st_lottie(robo_lottie,height=70,width=70, key="robo", speed=2.5)
     with col4:
         st_lottie(git_lottie,height=70,width=70, key="git", speed=2.5)
     with col1:
         st_lottie(github_lottie,height=50,width=50, key="github", speed=2.5)
     with col2:
-        st_lottie(docker_lottie,height=70,width=70, key="docker", speed=2.5)
+        st_lottie(mongodb_lottie,height=70,width=70, key="mongo", speed=2.5)
     with col3:
-        st_lottie(figma_lottie,height=50,width=50, key="figma", speed=2.5)
+        st_lottie(linux_lottie,height=70,width=70, key="linux", speed=2.5)
     with col4:
-        st_lottie(js_lottie,height=50,width=50, key="js", speed=1)
+        st_lottie(analysis_lottie,height=70,width=70, key="analysis", speed=2.5)
     
     
 # ----------------- timeline ----------------- #
@@ -135,7 +132,7 @@ with st.container():
         data = f.read()
 
     # render timeline
-    timeline(data, height=400)
+    timeline(data, height=500)
 
 
 
@@ -152,10 +149,10 @@ with st.container():
     <!DOCTYPE html>
     <html> 
     <head>
-        <title>Basic HTML</title>  
+        <title>PowerBI work snap</title>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Photo Slideshow</title>
+    <title>Simple PowerBI work snap Slideshow</title>
     <style>
         /* CSS for styling */
         body {
@@ -170,9 +167,9 @@ with st.container():
 
 
 
-    <body style="width:130%">  
+    <body>  
                         
-        <h1>Photo Slideshow</h1>
+        <h1>PowerBI Slideshow</h1>
     
     <div id="slideshow-container">
         <img class="mySlides" src="images/image1.jpg" alt="Image 1">
@@ -192,11 +189,11 @@ with st.container():
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
             setTimeout(showSlides, 2000); // Change image every 2 seconds
+            
+           
         }
     </script>
 
@@ -204,9 +201,9 @@ with st.container():
                     </body>  
                 </HTML>
                 """
-            , height=400, scrolling=True
+            # , height=400, scrolling=True
             )
-    st.markdown(""" <a href={}> <em>🔗 access to the link </a>""".format(info['Tableau']), unsafe_allow_html=True)
+    #st.markdown(""" <a href={}> <em>🔗 access to the link </a>""".format(info['Tableau']), unsafe_allow_html=True)
     
 # ----------------- medium ----------------- #
 with st.container():
@@ -215,7 +212,7 @@ with st.container():
     col1,col2 = st.columns([0.95, 0.05])
     with col1:
         with st.expander('Display my latest posts'):
-            components.html(embed_rss['rss'],height=400)
+            components.html(embed_rss['rss'],height=300)
             
         st.markdown(""" <a href={}> <em>🔗 access to the link </a>""".format(info['Medium']), unsafe_allow_html=True)
 
