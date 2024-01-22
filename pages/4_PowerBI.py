@@ -6,11 +6,11 @@ from constant import *
 
 #------------------- Power BI---------------------#
 # Define a list of image paths
-image_paths = ["images/image1.jpg", "images/image2.JPG", "images/image3.JPG"]
+image_paths = ["images/image1.jpg", "images/image2.JPG", "images/image3.JPG", "images/image4.JPG", "images/image5.JPG", "images/image6.JPG", "images/image7.PNG", "images/image8.PNG", "images/image9.PNG", "images/image10.PNG"]
 
 # Create a function to display a single image within a fixed box
 def image_slideshow(image_paths):
-    st.subheader("Image Slideshow")
+    st.subheader("Several snapshots of my work in PowerBI")
     image_placeholder = st.empty()
     idx = 0
 
@@ -36,7 +36,7 @@ with st.container():
 
     local_css("style/style.css")
 
-    st.sidebar.markdown(info['Photo'], unsafe_allow_html=True)
+    #st.sidebar.markdown(info['Photo'], unsafe_allow_html=True)
 
     # Title
     st.title("🫶 PowerBI works")
