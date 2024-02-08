@@ -1,32 +1,39 @@
 /* Change the sidebar color */
 [data-testid=stSidebar] {
-  background-image: linear-gradient(#6699CC, #FFEBEE);
+  background-image: linear-gradient(#7FDBFF, #0074D9); /* A cool blue gradient */
 }
+
+
+.stApp {
+      /*  background-color: #FFFFFF;      linear-gradient(#6fa8dc,#FFFFFF); */
+       background-image: linear-gradient(#6fa8dc,#FFFFFF);
+    }
+
 
 /* Style hyperlinks */
 a {
   display: block;
-  color: #ADD8E6 !important;
+  color: #FF851B !important; /* Bright orange */
   font-weight: bold;
 }
 
 p {
-  color: #333333;
+  color: #4D4D4D; /* Lighter gray */
 }
 
 .st-ck {
-  caret-color: black;
+  caret-color: White;
 }
 
 .st-bh, .st-c2, .st-c3, .st-c4, .st-c5, .st-c6, .st-c7, .st-c8, .st-c9, .st-ca, .st-cb, .st-b8, .st-cc, .st-cd, .st-ce, .st-cf, .st-cg, .st-ch, .st-ci, .st-cj, .st-ae, .st-af, .st-ag, .st-ck, .st-ai, .st-aj, .st-c1, .st-cl, .st-cm, .st-cn {
-  color: black;
+  color: Black;
 }
 
 /* Style the contact form */
 input[type=message], input[type=email], input[type=text], textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #BDBDBD; /* Lighter border */
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
@@ -37,7 +44,7 @@ input[type=message], input[type=email], input[type=text], textarea {
 
 /* Style the submit button with a specific background color etc */
 button[type=submit] {
-  background-color: #90EE90;
+  background-color: #0074D9; /* Solid blue */
   color: white;
   padding: 12px 20px;
   border: none;
@@ -47,7 +54,7 @@ button[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 button[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #001f3f; /* Navy blue */
 }
 
 /* Hide Streamlit Branding */
@@ -62,7 +69,7 @@ header {visibility: hidden;}
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #B0E0E6;
+  background-color: #DDDDDD; /* Light gray */
   color: black;
   text-align: center;
 }
