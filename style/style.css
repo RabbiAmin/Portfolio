@@ -8,7 +8,9 @@
       /*  background-color: #FFFFFF;      linear-gradient(#6fa8dc,#FFFFFF); */
        background-image: linear-gradient(#6fa8dc,#FFFFFF);
     }
-
+.st-eb {
+            background-color: #ffffff; /* Change this to your desired background color */
+        }
 
 /* Style hyperlinks */
 a {
