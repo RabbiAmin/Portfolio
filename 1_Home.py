@@ -8,7 +8,10 @@ from streamlit_lottie import st_lottie
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Amin Webpage", page_icon=":tada:", layout="wide")
+st.set_page_config(
+    page_title="Amin Webpage",
+    page_icon=":tada:",
+    layout="wide")
 
 
 
@@ -83,7 +86,7 @@ def gradient(color1, color2, color3, content1, content2):
 
 
 with st.container():
-    col1, col2 = st.columns([8,3])
+    col1, col2 = st.columns([8,0.001])
 
 full_name = info['Full_Name']
 with col1:
@@ -96,8 +99,8 @@ with col1:
 
     
     
-with col2:
-    st_lottie(lottie_gif, height=280, key="data")
+# with col2:
+#     st_lottie(lottie_gif, height=280, key="data")
 
 
 # ----------------- skillset ----------------- #
@@ -105,21 +108,21 @@ with st.container():
     st.subheader('⚒️ Skills')
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
     with col1:
-        st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
+        st_lottie(python_lottie, height=70,width=70, key="python", speed=1)
     with col2:
-        st_lottie(r_lottie, height=70,width=70, key="r", speed=4)
+        st_lottie(r_lottie, height=70,width=70, key="r", speed=1)
     with col3:
-        st_lottie(robo_lottie,height=70,width=70, key="robo", speed=2.5)
+        st_lottie(robo_lottie,height=70,width=70, key="robo", speed=1)
     with col4:
-        st_lottie(git_lottie,height=70,width=70, key="git", speed=2.5)
+        st_lottie(git_lottie,height=70,width=70, key="git", speed=1)
     with col1:
-        st_lottie(github_lottie,height=50,width=50, key="github", speed=2.5)
+        st_lottie(github_lottie,height=70,width=70, key="github", speed=1)
     with col2:
-        st_lottie(mongodb_lottie,height=70,width=70, key="mongo", speed=2.5)
+        st_lottie(mongodb_lottie,height=70,width=70, key="mongo", speed=1)
     with col3:
-        st_lottie(linux_lottie,height=70,width=70, key="linux", speed=2.5)
+        st_lottie(linux_lottie,height=70,width=70, key="linux", speed=1)
     with col4:
-        st_lottie(analysis_lottie,height=70,width=70, key="analysis", speed=2.5)
+        st_lottie(analysis_lottie,height=70,width=70, key="analysis", speed=1)
     
     
 # ----------------- timeline ----------------- #
