@@ -28,3 +28,11 @@ with col3:
    st.image(img_3)
 
 ### check the git hub
+
+
+
+st.write("RPubs:")
+website_url = "https://rpubs.com/rabbiamin/1051852"
+
+st.markdown(f"[Open the website]({website_url})")
+
