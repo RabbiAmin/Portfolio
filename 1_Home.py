@@ -7,6 +7,7 @@ from constant import *
 from streamlit_lottie import st_lottie
 
 
+
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(
     page_title="Amin Webpage",
@@ -105,24 +106,33 @@ with col1:
 
 # ----------------- skillset ----------------- #
 with st.container():
+    # Apply the custom class for the skillset section
+    st.markdown('<div class="skillset-section">', unsafe_allow_html=True)
+
     st.subheader('⚒️ Skills')
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
     with col1:
-        st_lottie(python_lottie, height=70,width=70, key="python", speed=1)
+        st_lottie(python_lottie, height=70, width=70, key="python", speed=1)
     with col2:
-        st_lottie(r_lottie, height=70,width=70, key="r", speed=1)
+        st_lottie(r_lottie, height=70, width=70, key="r", speed=1)
     with col3:
-        st_lottie(robo_lottie,height=70,width=70, key="robo", speed=1)
+        st_lottie(robo_lottie, height=70, width=70, key="robo", speed=1)
     with col4:
-        st_lottie(git_lottie,height=70,width=70, key="git", speed=1)
+        st_lottie(git_lottie, height=70, width=70, key="git", speed=1)
     with col1:
-        st_lottie(github_lottie,height=70,width=70, key="github", speed=1)
+        st_lottie(github_lottie, height=70, width=70, key="github", speed=1)
     with col2:
-        st_lottie(mongodb_lottie,height=70,width=70, key="mongo", speed=1)
+        st_lottie(mongodb_lottie, height=70, width=70, key="mongo", speed=1)
     with col3:
-        st_lottie(linux_lottie,height=70,width=70, key="linux", speed=1)
+        st_lottie(linux_lottie, height=70, width=70, key="linux", speed=1)
     with col4:
-        st_lottie(analysis_lottie,height=70,width=70, key="analysis", speed=1)
+        st_lottie(analysis_lottie, height=70, width=70, key="analysis", speed=1)
+
+    # Close the div tag for the custom section
+    st.markdown('</div>', unsafe_allow_html=True)
+
+
+
     
     
 # ----------------- timeline ----------------- #
