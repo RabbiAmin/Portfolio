@@ -22,11 +22,10 @@ st.set_page_config(
 # openai.api_key = (openai_api_key)
 
 # Add Google AdSense
-adsense_code = """
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5062604894981545"
-     crossorigin="anonymous"></script>
+adsense_verification = """
+<meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
 """
-components.html(adsense_code, height=0)  # height=0 since it doesn't have direct visual content
+components.html(adsense_verification)  # height=0 since it doesn't have direct visual content
 
 
 # load the file
