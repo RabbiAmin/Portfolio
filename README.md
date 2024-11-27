@@ -1,5 +1,4 @@
-As I embark on building my portfolio from scratch using Streamlit, I'd like to express my gratitude towards Dive Deeper. Her insightful blog, "Build your portfolio with Streamlit," has been instrumental in shaping my approach to this project. Her guidance provided the foundational ideas necessary to kickstart my journey in creating a compelling and professional portfolio.
-
+As I set out to create a visually captivating and interactive portfolio using Streamlit, I am thrilled to showcase my journey as a data analyst. A special mention goes to Vicky for her invaluable blog, 'Build Your Portfolio with Streamlit,' which provided me with essential inspiration and direction. This portfolio not only highlights my analytical expertise but also integrates a simple language model system powered by OpenAI, allowing visitors to learn more about me in a unique, conversational way. My goal is to blend professional elegance with innovative technology, offering both insight and engagement.
 
 # MR AMIN Portfolio
 

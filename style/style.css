@@ -1,60 +1,68 @@
-/* Change the sidebar color */
+/* Sidebar Styling */
 [data-testid=stSidebar] {
-  background-image: linear-gradient(#7FDBFF, #0074D9); /* A cool blue gradient */
+  background-image: linear-gradient(135deg, #ADB4BF, #454A52); /* Gradient from gray-blue to dark charcoal */
+  color: #F5F5F5; /* Light gray text for contrast */
 }
 
-
+/* Main Application Background */
 .stApp {
-      /*  background-color: #FFFFFF;      linear-gradient(#6fa8dc,#FFFFFF); */
-       background-image: linear-gradient(#6fa8dc,#FFFFFF);
-    }
+  background-color: #F5F5F5; /* Light gray background for the main app */
+}
 
+/* Box Background Styling */
+.st-eb {
+  background-color: #ADB4BF; /* Soft gray-blue for contrast */
+  border-radius: 8px;
+  padding: 15px;
+}
 
-/* Style hyperlinks */
+/* Hyperlink Styling */
 a {
   display: block;
-  color: #FF851B !important; /* Bright orange */
+  color: #454A52 !important; /* Dark charcoal for strong contrast */
   font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
 }
 
+a:hover {
+  color: #ADB4BF !important; /* Muted gray-blue on hover */
+}
+
+/* Paragraph Text Color */
 p {
-  color: #4D4D4D; /* Lighter gray */
+  color: #454A52; /* Dark charcoal for readability */
+  font-size: 16px;
 }
 
-.st-ck {
-  caret-color: White;
-}
-
-.st-bh, .st-c2, .st-c3, .st-c4, .st-c5, .st-c6, .st-c7, .st-c8, .st-c9, .st-ca, .st-cb, .st-b8, .st-cc, .st-cd, .st-ce, .st-cf, .st-cg, .st-ch, .st-ci, .st-cj, .st-ae, .st-af, .st-ag, .st-ck, .st-ai, .st-aj, .st-c1, .st-cl, .st-cm, .st-cn {
-  color: Black;
-}
-
-/* Style the contact form */
+/* Input and Textarea Styling */
 input[type=message], input[type=email], input[type=text], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #BDBDBD; /* Lighter border */
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ADB4BF; /* Soft gray-blue border */
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: #F5F5F5; /* Light gray background */
+  color: #454A52; /* Dark charcoal text */
+  font-size: 14px;
 }
 
-
-/* Style the submit button with a specific background color etc */
+/* Submit Button Styling */
 button[type=submit] {
-  background-color: #0074D9; /* Solid blue */
-  color: white;
-  padding: 12px 20px;
+  background-color: #454A52; /* Dark charcoal for strong CTA button */
+  color: #F5F5F5; /* Light gray text */
+  padding: 14px 22px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 button[type=submit]:hover {
-  background-color: #001f3f; /* Navy blue */
+  background-color: #ADB4BF; /* Soft gray-blue on hover */
 }
 
 /* Hide Streamlit Branding */
@@ -62,30 +70,55 @@ button[type=submit]:hover {
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
-
-
+/* Footer Styling */
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #DDDDDD; /* Light gray */
-  color: black;
+  background-color: #454A52; /* Dark charcoal footer */
+  color: #F5F5F5; /* Light gray text for readability */
   text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ADB4BF;
 }
 
-/* Add this to your existing style.css file */
+/* Portfolio Picture Styling */
 #portfolio-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px; /* Adjust as needed */
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin: 20px auto; /* Centering the picture */
 }
 
 #portfolio-picture img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
+  width: 90%;
+  height: auto;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
+#portfolio-picture img:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Caret Color */
+.st-ck {
+  caret-color: #F5F5F5; /* Light gray caret */
+}
+
+/* Skills Section Styling */
+.skillset-section {
+  background-color: #ADB4BF !important; /* Gray-blue background */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #454A52 !important; /* Dark charcoal text */
+}
+
+/* General Text Color */
+.st-bh, .st-c2, .st-c3, .st-c4, .st-c5, .st-c6, .st-c7, .st-c8, .st-c9, .st-ca, .st-cb, .st-b8, .st-cc, .st-cd, .st-ce, .st-cf, .st-cg, .st-ch, .st-ci, .st-cj, .st-ae, .st-af, .st-ag, .st-ck, .st-ai, .st-aj, .st-c1, .st-cl, .st-cm, .st-cn {
+  color: #454A52; /* Dark charcoal for better contrast */
+}

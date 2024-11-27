@@ -47,3 +47,5 @@ with st.container():
 if st._is_running:
     stop_slideshow = True
     slideshow_thread.join()
+
+
